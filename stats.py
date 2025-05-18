@@ -16,3 +16,12 @@ def get_num_char(text):
     return chars_dict
 
 
+def sort_on(d):
+    return d["num"]
+
+def sorted_char_list(dict):
+    dict_list = []
+    for i in dict:
+        dict_list.append({"char": i, "num": dict[i]})
+    dict_list.sort(reverse=True, key=sort_on)
+    return dict_list
